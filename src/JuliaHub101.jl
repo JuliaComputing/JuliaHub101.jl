@@ -17,7 +17,7 @@ Registering packages on JuilaHub can unlock productivity and collaboration benef
 
 ```julia-repl
 julia> greet()
-Hello JuliaHub!
+"Hello JuliaHub!"
 ```
 """
 greet() = "Hello JuliaHub!"
