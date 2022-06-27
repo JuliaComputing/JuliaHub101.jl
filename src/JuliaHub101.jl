@@ -32,6 +32,9 @@ This function takes one parameter, ``x``, and returns its square, ``x^2``.
 ```julia-repl
 julia> square(2)
 4
+
+julia> square(4)
+16
 ```
 """
 square(x) = x^2
