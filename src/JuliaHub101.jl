@@ -20,7 +20,7 @@ julia> greet()
 "Hello JuliaHub!"
 ```
 """
-greet() = "Hello JuliaHub!"
+greet() = "Hello JuliaHub 101!"
 
 """
     square(x)
