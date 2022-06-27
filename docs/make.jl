@@ -6,7 +6,8 @@ makedocs(
     format = Documenter.HTML(),
     modules = [JuliaHub101],
     pages = [
-        "Hello" => "hello.md",
+        "Introduction" => "index.md"
+        "Greetings" => "hello.md",
         "Math 101" => "math.md",
         "Fizz Buzz" => "fizzbuzz.md"
     ]
