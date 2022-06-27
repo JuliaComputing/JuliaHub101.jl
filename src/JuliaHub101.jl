@@ -20,7 +20,7 @@ julia> greet()
 Hello JuliaHub!
 ```
 """
-greet() = print("Hello JuliaHub!")
+greet() = "Hello JuliaHub!"
 
 """
     square(x)
@@ -74,31 +74,36 @@ mygcd = gcd ∘ collect ∘ extrema
     fizzbuzz()
 
 Simple program based on [Fizz buzz](https://en.wikipedia.org/wiki/Fizz_buzz) - a simple game
-often used to teach division. If `fizzbuzz` is called with no arguments, then
-the default range will be used (1-100).
+often used to teach division. Fizzbuzz is passed one number as an argument, and if that number
+divisible by 3 then the string `"Fizz"` is returned. If the number is divisible by 5 then the
+string `"Buzz"` is returned. If the number is divisible by 3 **and** 5 then the string `"FizzBuzz"`
+is returned.
 
 ## Examples
 
 ```julia-repl
+julia> fizzbuzz(15)
+"FizzBuzz"
+
+julia> fizzbuzz(16)
+""
+
 julia> fizzbuzz(5)
-1
-2
-Fizz
-4
-Buzz
+"Buzz"
+
+julia> fizzbuzz(3)
+"Fizz"
 ```
 """
-function fizzbuzz(n=100)
-    for i in 1:n
-        if i % 15 == 0
-            println("FizzBuzz")
-        elseif i % 3 == 0
-            println("Fizz")
-        elseif i % 5 == 0
-            println("Buzz")
-        else
-            println(i)
-        end
+function fizzbuzz(n)
+    if n % 15 == 0
+        return "FizzBuzz"
+    elseif n % 3 == 0
+        return "Fizz"
+    elseif n % 5 == 0
+        return "Buzz"
+    else
+        return ""
     end
 end
 
